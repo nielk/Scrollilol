@@ -1,4 +1,4 @@
-Scrollilol
+Scrollilol (beta)
 ==========
 
 The simple as fuck VanillaJS library for "fixed menu scroll" - 
@@ -12,3 +12,5 @@ To do list :
 [  ] Ipad safari -webkit-backface-visibility
 
 [  ] test browsers support
+
+[  ] Create a "How to"
