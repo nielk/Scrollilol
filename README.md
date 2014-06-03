@@ -9,6 +9,6 @@ To do list :
 
 [✓] gh-pages
 
-[ ] Ipad safari -webkit-backface-visibility
+[.] Ipad safari -webkit-backface-visibility
 
-[ ] test browsers support
+[.] test browsers support
