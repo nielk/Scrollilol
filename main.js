@@ -29,16 +29,20 @@ var scrollilol = (function(window) {
         }
     };
 
+    var hasClass = function(element, cls) {
+        return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+    }
+
     var scrollController = function() {
         getCurrentPosition();
-        
+        //elt.classList not available in "old" browsers : http://caniuse.com/classlist
         if(window.pageXOffset === 0 && currentPosition > startOffset && prevPosition < currentPosition && currentPosition > 0) {
-            if(!elt.classList.contains('hideit')) {
-                elt.classList.add('hideit');
+            if(!hasClass(elt,"hideit")) {
+                elt.className += " hideit";
             }
         } else if(currentPosition > startOffset && currentPosition < document.body.clientHeight - window.innerHeight) {
-            if(elt.classList.contains('hideit')) {
-                elt.classList.remove("hideit");
+            if(hasClass(elt,"hideit")) {
+                elt.className = elt.className.replace(new RegExp('(\\s|^)hideit(\\s|$)'),' ').replace(/^\s+|\s+$/g, '');
             }
         }
         prevPosition = currentPosition;
