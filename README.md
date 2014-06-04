@@ -9,6 +9,8 @@ To do list :
 
 [✓] gh-pages
 
+[  ] fix IE9 bug : doesn't support ClassList
+
 [  ] Ipad safari -webkit-backface-visibility
 
 [  ] test browsers support
