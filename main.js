@@ -76,11 +76,11 @@ var scrollilol = (function(window) {
     }
 
     return {
-        init: function(_elementId = 'scrollilol', _startOffset = 0, _throttleRate = 100) {
-            startOffset = _startOffset;
-            throttleRate = _throttleRate;
+        init: function(_elementId, _startOffset, _throttleRate) {
+            startOffset = _startOffset || 0;
+            throttleRate = _throttleRate || 150;
             
-            getScrollObject(_elementId) || console.log('Scrollilol : error >> element Id not found');
+            getScrollObject(_elementId || 'scrollilol') || console.log('Scrollilol : error >> element Id not found');
             listenScroll() || console.log('Scrollilol : error >> can\'t listenning the element');
         }
     };
