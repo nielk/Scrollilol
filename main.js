@@ -86,9 +86,9 @@ var scrollilol = (function(window) {
     return {
         init: function(_elementId, _startOffset, _throttleRate) {
             startOffset = _startOffset || 0;
-            throttleRate = _throttleRate;
-
-            getScrollObject(_elementId) || console.log('Scrollilol : error >> element Id not found');
+            throttleRate = _throttleRate || 150;
+            
+            getScrollObject(_elementId || 'scrollilol') || console.log('Scrollilol : error >> element Id not found');
             listenScroll() || console.log('Scrollilol : error >> can\'t listenning the element');
             
             return this;
@@ -105,5 +105,5 @@ var scrollilol = (function(window) {
         }
     };
 })(window);
- 
+
 scrollilol.init('scrollilol', 0, 100).close(function(){/* test */});
